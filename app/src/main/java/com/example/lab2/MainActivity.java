@@ -24,4 +24,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Teclado.class);
         startActivity( intent );
     }
+
+    public   void irMonitor(View view){
+        Intent intent = new Intent(MainActivity.this, ListaMonitor.class);
+        startActivity( intent );
+    }
 }

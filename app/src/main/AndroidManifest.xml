@@ -20,6 +20,12 @@
             android:name=".ComputadoraActivity"
             android:exported="false" />
         <activity
+            android:name=".Reporte"
+            android:exported="false" />
+        <activity
+            android:name=".ListaMonitor"
+            android:exported="false" />
+        <activity
             android:name=".ActualizarMonitor"
             android:exported="false" />
         <activity
