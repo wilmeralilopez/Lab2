@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public   void irComputadora(View view){
-        Intent intent = new Intent(MainActivity.this, Computadora.class);
+        Intent intent = new Intent(MainActivity.this, ComputadoraActivity.class);
         startActivityForResult(intent, 1);
     }
+
 }
