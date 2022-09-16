@@ -3,8 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/btn_menu_computadora"
-        android:icon="@drawable/ic_3puntos"
-        android:onClick="btnMenuComputadoraAction"
-        app:showAsAction="ifRoom" />
+        android:id="@+id/btn_buscar_computadora"
+        android:title="Buscar" />
+    <item
+        android:id="@+id/btn_todo_computadora"
+        android:title="Todo" />
 </menu>

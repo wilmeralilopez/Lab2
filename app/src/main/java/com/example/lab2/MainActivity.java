@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.lab2.entity.Computadora;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public   void irComputadora(View view){
-        Intent intent = new Intent(MainActivity.this, Computadora.class);
-        startActivityForResult(intent, 1);
+    public void irComputadora(View view){
+        Intent intent = new Intent(MainActivity.this, ComputadoraActivity.class);
+        startActivity(intent);
     }
 
     public   void irTeclado(View view){
