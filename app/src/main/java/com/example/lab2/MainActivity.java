@@ -17,4 +17,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Computadora.class);
         startActivityForResult(intent, 1);
     }
+
+    public   void irTeclado(View view){
+        Intent intent = new Intent(this, Teclado.class);
+        startActivity( intent );
+    }
 }
