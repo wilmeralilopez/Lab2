@@ -20,6 +20,15 @@
             android:name=".ComputadoraActivity"
             android:exported="false" />
         <activity
+            android:name=".ActualizarMonitor"
+            android:exported="false" />
+        <activity
+            android:name=".ActulizarMonitor"
+            android:exported="false" />
+        <activity
+            android:name=".AddMonitor"
+            android:exported="false" />
+        <activity
             android:name=".Teclado"
             android:exported="false" />
         <activity
