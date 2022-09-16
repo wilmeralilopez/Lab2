@@ -48,6 +48,7 @@ public class ComputadoraActivity extends AppCompatActivity {
                     return false;
             }
         });
+        popupMenu.show();
 
 
     }
