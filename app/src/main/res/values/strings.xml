@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Lab2</string>
+    <string name="overflow_buscar">buscar</string>
+    <string name="overflow_todo">todo</string>
+    <string name="textViewMonitor">No entra al if</string>
+
 </resources>
