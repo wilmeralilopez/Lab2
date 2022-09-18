@@ -1,15 +1,22 @@
 package com.example.lab2;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 
 import com.example.lab2.entity.Computadora;
+import com.example.lab2.entity.ComputadorasLista;
 
 import java.util.ArrayList;
 
@@ -17,11 +24,29 @@ public class ComputadoraActivity extends AppCompatActivity {
 
 
     ArrayList<Computadora> computadoras = new ArrayList<>();
-
+    public String texto_buscar_comp = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_computadora);
+
+        FloatingActionButton floatingActionButton = findViewById(R.id.fab_add_computadora);
+        floatingActionButton.setOnClickListener(view -> {
+            Intent intent =new Intent(this, CrearComputadoraActivity.class);
+            startActivity(intent);
+        });
+
+        if(ComputadorasLista.getListaComputadoras().size()>0){
+            TextView textView= findViewById(R.id.text_noHayPC);
+            textView.setText("");
+            textView.setTextSize(0);
+
+
+            ListView listView = findViewById(R.id.listView_computadoras);
+
+        }
+
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -33,6 +58,8 @@ public class ComputadoraActivity extends AppCompatActivity {
 
     public void btnMenuComputadoraAction(MenuItem menuItem) {
         Log.d("msg", "clic texto");
+
+
         View view = findViewById(R.id.btn_menu_computadora);
         PopupMenu popupMenu = new PopupMenu(this, view);
         popupMenu.getMenuInflater().inflate(R.menu.appbar_submenu_computadora, popupMenu.getMenu());
@@ -40,6 +67,7 @@ public class ComputadoraActivity extends AppCompatActivity {
             switch (menuItem1.getItemId()) {
                 case R.id.btn_buscar_computadora:
                     Log.d("msg", "btn_buscar_computadora pressed");
+                    buscadorComp();
                     return true;
                 case R.id.btn_todo_computadora:
                     Log.d("msg", "btn_todo_computadora pressed");
@@ -49,7 +77,22 @@ public class ComputadoraActivity extends AppCompatActivity {
             }
         });
         popupMenu.show();
+    }
+    public void buscadorComp(){
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Computadora");
+        final EditText input = new EditText(this);
+        alertDialog.setView(input);
 
-
+        alertDialog.setPositiveButton("Buscar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                texto_buscar_comp = input.getText().toString();
+                Log.d("msg","Texto "+ texto_buscar_comp);
+            }
+        });
+        alertDialog.setNegativeButton("Cancelar", (dialogInterface, i) ->
+                Log.d("msg","btn cancelar presionado"));
+        alertDialog.show();
     }
 }

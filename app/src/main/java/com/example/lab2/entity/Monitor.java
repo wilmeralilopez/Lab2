@@ -10,6 +10,16 @@ public class Monitor implements Serializable {
     private String años;
     private String Modelo;
 
+    public Monitor(String activo, String pcActivo, String marca, String pulgadas, String años, String modelo) {
+        this.activo = activo;
+        this.pcActivo = pcActivo;
+        this.marca = marca;
+        this.pulgadas = pulgadas;
+        this.años = años;
+        Modelo = modelo;
+    }
+
+
 
     public String getActivo() {
         return activo;

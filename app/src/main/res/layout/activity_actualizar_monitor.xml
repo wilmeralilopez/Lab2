@@ -4,82 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActualizarMonitor">
+    tools:context=".ActualizarMonitor"
+    >
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/editText_Pulgadas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="Pulgadas"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName13"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
-        tools:layout_editor_absoluteY="471dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText_Marca"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_Marca"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Marca" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName12"
+        android:id="@+id/editText_PCactivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="PC Activo"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName14"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName14"
-        tools:layout_editor_absoluteY="255dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText_activo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_activo"
+        app:layout_constraintTop_toBottomOf="@+id/editText_activo" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName13"
+        android:id="@+id/editText_Marca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Marca"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName12"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName12"
-        tools:layout_editor_absoluteY="377dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText_PCactivo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_PCactivo"
+        app:layout_constraintTop_toBottomOf="@+id/editText_PCactivo" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName14"
+        android:id="@+id/editText_activo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="Activo"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="153dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Modelo"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName16"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName16"
-        tools:layout_editor_absoluteY="648dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView_monitor2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_monitor2"
+        app:layout_constraintTop_toBottomOf="@+id/textView_monitor2" />
 
     <TextView
         android:id="@+id/textView_monitor2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:text="Monitor"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName16"
+        android:id="@+id/editText_Año"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Año"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName11"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName11"
-        tools:layout_editor_absoluteY="563dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText_Pulgadas"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_Pulgadas"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Pulgadas" />
+
+    <EditText
+        android:id="@+id/editText_Modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Modelo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Año"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_Año"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Año" />
 </android.support.constraint.ConstraintLayout>

@@ -3,28 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/USUARIO/Downloads/LAB2IOT/Lab2/app/src/main/res/layout/activity_actualizar_monitor.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/USUARIO/Downloads/LAB2IOT/Lab2/app/src/main/res/layout/activity_actulizar_monitor.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/USUARIO/Downloads/LAB2IOT/Lab2/app/src/main/res/layout/activity_add_monitor.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/USUARIO/Downloads/LAB2IOT/Lab2/app/src/main/res/layout/activity_computadora.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/USUARIO/Downloads/LAB2IOT/Lab2/app/src/main/res/layout/activity_crear_computadora.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/USUARIO/Downloads/LAB2IOT/Lab2/app/src/main/res/layout/activity_lista_monitor.xml" value="0.2" />
-        <entry key="..\:/Users/USUARIO/Downloads/LAB2IOT/Lab2/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/USUARIO/Downloads/LAB2IOT/Lab2/app/src/main/res/layout/activity_reporte.xml" value="0.18072916666666666" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/layout/activity_actualizar_computadora_ativity.xml" value="0.1" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/layout/activity_actualizar_monitor.xml" value="0.1" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/layout/activity_reporte.xml" value="0.1" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/layout/activity_teclado.xml" value="0.16" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/layout/activity_teclado_nuevo.xml" value="0.22" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/layout/card_teclado.xml" value="0.1" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/menu/appbar_computadora.xml" value="0.1" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/menu/appbar_teclado_listar.xml" value="0.18541666666666667" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/menu/appbar_teclado_nuevo.xml" value="0.25" />
-        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/Lab2/app/src/main/res/menu/popup_teclado.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/layout/activity_actualizar_monitor.xml" value="0.1" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/layout/activity_add_monitor.xml" value="0.2346014492753623" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/layout/activity_computadora.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/layout/activity_crear_computadora.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/layout/activity_lista_monitor.xml" value="0.264" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/layout/activity_main.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/layout/activity_teclado.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/layout/dialog_buscar_monitor.xml" value="0.264" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/layout/list_item_monitores.xml" value="0.23596014492753623" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/menu/menu_actualizar.xml" value="0.253125" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/menu/menu_monitor.xml" value="0.264" />
+        <entry key="..\:/Users/MAYERLI/AndroidStudioProjects/Lab2/app/src/main/res/menu/menu_nuevo_monitor.xml" value="0.253125" />
+        <entry key="..\:/Users/kathe/AndroidStudioProjects/Lab2/app/src/main/res/layout/activity_computadora.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
 </project>
