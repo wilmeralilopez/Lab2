@@ -22,7 +22,7 @@
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="aaa" />
+            tools:text="No hay computadoras ingresadas" />
 
         <ListView
             android:id="@+id/listView_computadoras"

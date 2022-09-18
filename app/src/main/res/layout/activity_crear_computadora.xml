@@ -10,11 +10,11 @@
         android:id="@+id/textView_computadora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
         android:text="Computadora"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.252"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,33 +32,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_computadora" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="@+id/editText_computadora_activo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText_computadora_activo"
-        app:layout_constraintTop_toBottomOf="@+id/editText_computadora_activo" />
-
-    <EditText
         android:id="@+id/editText_anio_computadora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Año"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_marcas_pc"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/spinner_marcas_pc"
+        tools:layout_editor_absoluteY="343dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/editTextCPU_pc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -69,4 +55,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editText_anio_computadora"
         app:layout_constraintTop_toBottomOf="@+id/editText_anio_computadora" />
+
+    <Spinner
+        android:id="@+id/spinner_marcas_pc"
+        android:layout_width="199dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="48dp"
+        android:entries="@array/listaMarcasPC"
+        app:layout_constraintEnd_toEndOf="@+id/editText_computadora_activo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_computadora_activo"
+        app:layout_constraintTop_toBottomOf="@+id/editText_computadora_activo" />
 </android.support.constraint.ConstraintLayout>

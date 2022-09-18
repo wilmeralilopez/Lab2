@@ -10,7 +10,7 @@ public class ComputadorasLista {
         return listaComputadoras;
     }
 
-    public void crearComputadora(Computadora computadora){
+    public static void crearComputadora(Computadora computadora){
         listaComputadoras.add(computadora);
 
     }
@@ -31,5 +31,18 @@ public class ComputadorasLista {
             }
         }
         return null;
+    }
+    public static ArrayList<String> computadorasDescripcion(){
+        ArrayList<String> listaDescripcionesPC=new ArrayList<>();
+        String item = "";
+        for(Computadora pc: listaComputadoras){
+            item="Activo: "+ pc.getActivo()+"\n"+
+            "Marca: "+marcasComputadoras(pc.getMarca())+"\n"+
+            "Año: "+pc.getAño()+"\n"+
+            "CPU: "+pc.getCpu();
+
+            listaDescripcionesPC.add(item);
+        }
+        return listaDescripcionesPC;
     }
 }

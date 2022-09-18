@@ -10,10 +10,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.lab2.entity.Computadora;
 import com.example.lab2.entity.ComputadorasLista;
@@ -43,6 +46,17 @@ public class ComputadoraActivity extends AppCompatActivity {
 
 
             ListView listView = findViewById(R.id.listView_computadoras);
+            ArrayAdapter<String> arrayAdapter= new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,ComputadorasLista.computadorasDescripcion());
+            listView.setAdapter(arrayAdapter);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Toast.makeText(ComputadoraActivity.this, Integer.toString(position), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(ComputadoraActivity.this, ActualizarComputadoraAtivity.class);
+                    intent.putExtra("position",Integer.toString(position));
+                    startActivity(intent);
+                }
+            });
 
         }
 
