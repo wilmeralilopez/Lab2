@@ -3,6 +3,7 @@ package com.example.lab2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,12 +23,12 @@ public class ListaMonitor extends AppCompatActivity implements Custom_dialog_mon
     private TextView  textViewMonitor;
     private ListView listaMonitor;
 
-    private String Nombres [] = {"Monitor 1", "Monitor 2"};
-    private String año [] = {"2021", "2022"};
+    private final String[] Nombres = {"Monitor 1", "Monitor 2"};
+    private final String[] año = {"2021", "2022"};
 
-    private ArrayList<String> list_monitores = new ArrayList<>();
-    private ArrayList<Monitor> list_monitores_cache = new ArrayList<>();
-    private ArrayList<Monitor> list_monitores_cache_buscador = new ArrayList<>();
+    private final ArrayList<String> list_monitores = new ArrayList<>();
+    private final ArrayList<Monitor> list_monitores_cache = new ArrayList<>();
+    private final ArrayList<Monitor> list_monitores_cache_buscador = new ArrayList<>();
 
 
     int encontrado = 0;
@@ -47,17 +48,20 @@ public class ListaMonitor extends AppCompatActivity implements Custom_dialog_mon
         textViewMonitor = findViewById(R.id.tv_monitor);
         listaMonitor = findViewById(R.id.listView_monitor);
 
-        //Crear objetos de lista
+        try
+        {
+            Bundle recibirdatos = getIntent().getExtras();
+            Monitor monitor = (Monitor) recibirdatos.getSerializable("monitor");
+            Log.d("dato recibido en lista", String.valueOf(list_monitores_cache));
 
-       Monitor monitor1 = new Monitor("C042322",
-                "C012322",
-                "Dell",
-                "25\"",
-                "2022",
-                "d1234");
+            list_monitores_cache.add(monitor);
+        }
+        catch(NullPointerException e)
+        {
+            System.out.print("NullPointerException Caught");
+        }
 
 
-        list_monitores_cache.add(monitor1);
 
         Monitor monitor2 = new Monitor("C042323",
                 "C012323",
@@ -204,6 +208,11 @@ public class ListaMonitor extends AppCompatActivity implements Custom_dialog_mon
     public   void addMonitor(View view){
         Intent intent = new Intent(ListaMonitor.this, AddMonitor.class);
         startActivityForResult(intent, 1);
+        Bundle bundle2 = new Bundle();
+        bundle2.putSerializable("lista", list_monitores_cache);
+        intent.putExtras(bundle2);
+        startActivity(intent);
+
     }
 
     @Override//Buscador
