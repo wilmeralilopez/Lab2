@@ -1,5 +1,6 @@
 package com.example.lab2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -40,6 +41,8 @@ public class ActualizarMonitor extends AppCompatActivity {
 
 
 
+
+
         //Monitor monitor = (Monitor) getIntent().getSerializableExtra("monitor");
 
 
@@ -59,7 +62,23 @@ public class ActualizarMonitor extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id=item.getItemId();
         if(id==R.id.actualizar){
-            Toast.makeText(this, "Actualizar", Toast.LENGTH_SHORT).show();
+            Monitor monitor = new Monitor(etActivo.getText().toString(),
+                    etPcActivo.getText().toString(),
+                    etMarca.getText().toString(),
+                    etPulgadas.getText().toString(),
+                    etAño.getText().toString(),
+                    etModelo.getText().toString());
+
+            //Toast.makeText(this, "Actualizar", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(this, ListaMonitor.class);
+            startActivityForResult(intent, 1);
+            Bundle bundle3 = new Bundle();
+            bundle3.putSerializable("monitor2", monitor);
+            intent.putExtras(bundle3);
+            startActivity(intent);
+
+
         } else if (id==R.id.eliminar){
             Toast.makeText(this, "Eliminar", Toast.LENGTH_SHORT).show();
         }

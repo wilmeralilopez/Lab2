@@ -51,10 +51,31 @@ public class ListaMonitor extends AppCompatActivity implements Custom_dialog_mon
         try
         {
             Bundle recibirdatos = getIntent().getExtras();
-            Monitor monitor = (Monitor) recibirdatos.getSerializable("monitor");
-            Log.d("dato recibido en lista", String.valueOf(list_monitores_cache));
+            Monitor monitor = (Monitor) recibirdatos.getSerializable("monitor1");
+            //Log.d("dato recibido en lista", String.valueOf(list_monitores_cache));
 
             list_monitores_cache.add(monitor);
+
+
+
+
+            Monitor monitor2 = (Monitor) recibirdatos.getSerializable("monitor2");
+            for (int x = 0; x < list_monitores_cache.size(); x++) {
+                Monitor p = list_monitores_cache.get(x);
+                if (p.getActivo().equalsIgnoreCase(monitor2.getActivo())) {
+                    p.setModelo(monitor2.getModelo());
+                    p.setAños(monitor2.getAños());
+                    p.setPulgadas(monitor2.getPulgadas());
+                    p.setMarca(monitor2.getMarca());
+                    p.setPcActivo(monitor2.getPcActivo());
+                    list_monitores_cache_buscador.add(p);
+
+
+                    break; // Terminar ciclo, pues ya lo encontramos
+                }
+            }
+
+
         }
         catch(NullPointerException e)
         {
@@ -145,6 +166,8 @@ public class ListaMonitor extends AppCompatActivity implements Custom_dialog_mon
             //Toast.makeText(this, "Buscar", Toast.LENGTH_SHORT).show();
         } else if (id==R.id.overflow_todo){
             //Toast.makeText(this, "Todo", Toast.LENGTH_SHORT).show();
+
+            list_monitores_cache_buscador.clear();
 
 
             if (list_monitores_cache.size() != 0) {

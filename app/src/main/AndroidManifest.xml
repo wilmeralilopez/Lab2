@@ -16,6 +16,9 @@
         >
 
         <activity
+            android:name=".TecladoNuevo"
+            android:exported="false" />
+        <activity
             android:name=".ActualizarComputadoraAtivity"
             android:exported="false" />
         <activity
@@ -45,7 +48,8 @@
             />
         <activity
             android:name=".Teclado"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Computadora"
             android:exported="false" />
