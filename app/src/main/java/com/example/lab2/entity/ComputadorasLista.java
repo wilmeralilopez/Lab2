@@ -33,13 +33,21 @@ public class ComputadorasLista {
         };
         return marcas[i];
     }
-    public static Computadora buscarComputadora(String activo){
-        for(Computadora pc : listaComputadoras){
-            if(pc.getActivo().equalsIgnoreCase(activo)){
-                return pc;
-            }
+    public static ArrayList<String> buscarPC(String activo){
+        ArrayList<String> listaPCs=new ArrayList<>();
+        String item = "";
+        for(Computadora pc: listaComputadoras){
+           if(pc.getActivo().equalsIgnoreCase(activo)){
+               item="Activo: "+ pc.getActivo()+"\n"+
+                       "Marca: "+marcasComputadoras(pc.getMarca())+"\n"+
+                       "Año: "+pc.getAño()+"\n"+
+                       "CPU: "+pc.getCpu();
+
+               listaPCs.add(item);
+               return listaPCs;
+           }
         }
-        return null;
+        return listaPCs;
     }
     public static ArrayList<String> computadorasDescripcion(){
         ArrayList<String> listaDescripcionesPC=new ArrayList<>();

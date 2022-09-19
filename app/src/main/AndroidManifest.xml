@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.lab2">
+    package="com.example.lab2" >
 
     <application
         android:allowBackup="true"
@@ -12,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab2"
-        tools:targetApi="31"
-        >
-
+        tools:targetApi="31" >
+        <activity
+            android:name=".ComputadoraActivity"
+            android:exported="false" />
         <activity
             android:name=".TecladoNuevo"
             android:exported="false" />
@@ -22,30 +23,23 @@
             android:name=".ActualizarComputadoraAtivity"
             android:exported="false" />
         <activity
-            android:name=".ComputadoraActivity"
-            android:exported="false" />
-        <activity
             android:name=".Reporte"
             android:exported="false" />
         <activity
             android:name=".ListaMonitor"
             android:exported="false"
-            android:label="Monitor"
-
-            />
+            android:label="Monitor" />
         <activity
             android:name=".ActualizarMonitor"
             android:exported="false"
-            android:label="Actualizar"
-            />
+            android:label="Actualizar" />
         <activity
             android:name=".ActulizarMonitor"
             android:exported="false" />
         <activity
             android:name=".AddMonitor"
             android:exported="false"
-            android:label="Nuevo"
-            />
+            android:label="Nuevo" />
         <activity
             android:name=".Teclado"
             android:exported="false"
@@ -55,7 +49,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

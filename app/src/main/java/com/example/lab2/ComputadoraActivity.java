@@ -26,27 +26,25 @@ import java.util.ArrayList;
 public class ComputadoraActivity extends AppCompatActivity {
 
 
-    ArrayList<Computadora> computadoras = new ArrayList<>();
+    TextView textView;
     public String texto_buscar_comp = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_computadora);
 
-        FloatingActionButton fab= findViewById(R.id.fab_add_computadora);
-        Intent intent = new Intent(this, CrearComputadoraActivity.class);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(intent);
 
-            }
-        });
 
+        Computadora computadora = new Computadora();
+        computadora.setActivo("aaa");
+        computadora.setMarca(1);
+        computadora.setAño("2001");
+        computadora.setCpu("ccccc");
+        ComputadorasLista.crearComputadora(computadora);
 
 
         if(!ComputadorasLista.getListaComputadoras().isEmpty()){
-            TextView textView= findViewById(R.id.text_noHayPC);
+            textView= findViewById(R.id.text_noHayPC);
             textView.setText("");
             textView.setTextSize(0);
 
@@ -68,10 +66,10 @@ public class ComputadoraActivity extends AppCompatActivity {
 
 
     }
-    public void irCrearComputadora(View view){
-        Intent intent = new Intent(ComputadoraActivity.this, CrearComputadoraActivity.class);
-        startActivityForResult(intent, 1);
-        startActivity(intent);
+    public void añadirComputadora(View view){
+        Intent intent = new Intent(this, CrearComputadoraActivity.class);
+        int requestCode = 1;
+        startActivityForResult(intent, requestCode);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -113,6 +111,22 @@ public class ComputadoraActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 texto_buscar_comp = input.getText().toString();
                 Log.d("msg","Texto "+ texto_buscar_comp);
+                ArrayList<String> pcsBuscador = ComputadorasLista.buscarPC(texto_buscar_comp);
+                ListView listView= findViewById(R.id.listView_computadoras);
+                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ComputadoraActivity.this, android.R.layout.simple_list_item_1,pcsBuscador);
+                listView.setAdapter(arrayAdapter);
+                if(pcsBuscador.size()>0){
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Toast.makeText(ComputadoraActivity.this, Integer.toString(position), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(ComputadoraActivity.this, ActualizarComputadoraAtivity.class);
+                            intent.putExtra("position",Integer.toString(position));
+                            startActivity(intent);
+                        }
+                    });
+                }else {
+                    textView.setText("NO se encontraron resultados de busqueda");
+                }
             }
         });
         alertDialog.setNegativeButton("Cancelar", (dialogInterface, i) ->
