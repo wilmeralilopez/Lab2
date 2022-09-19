@@ -10,12 +10,21 @@ public class ComputadorasLista {
         return listaComputadoras;
     }
 
-    public void crearComputadora(Computadora computadora){
+    public static void crearComputadora(Computadora computadora){
         listaComputadoras.add(computadora);
 
     }
-    public void eliminarComputadora(Computadora computadora){
-        listaComputadoras.remove(computadora);
+
+    public static void editarComputadora(int position, Computadora computadora){
+        Computadora pc = ComputadorasLista.getListaComputadoras().get(position);
+        pc.setActivo(computadora.getActivo());
+        pc.setMarca(computadora.getMarca());
+        pc.setAño(computadora.getAño());
+        pc.setCpu(computadora.getCpu());
+    }
+
+    public static  void eliminarComputadora(int posicion){
+        listaComputadoras.remove(ComputadorasLista.getListaComputadoras().get(posicion));
     }
 
     private static String marcasComputadoras(int i){
@@ -24,12 +33,33 @@ public class ComputadorasLista {
         };
         return marcas[i];
     }
-    public static Computadora buscarComputadora(String activo){
-        for(Computadora pc : listaComputadoras){
-            if(pc.getActivo().equalsIgnoreCase(activo)){
-                return pc;
-            }
+    public static ArrayList<String> buscarPC(String activo){
+        ArrayList<String> listaPCs=new ArrayList<>();
+        String item = "";
+        for(Computadora pc: listaComputadoras){
+           if(pc.getActivo().equalsIgnoreCase(activo)){
+               item="Activo: "+ pc.getActivo()+"\n"+
+                       "Marca: "+marcasComputadoras(pc.getMarca())+"\n"+
+                       "Año: "+pc.getAño()+"\n"+
+                       "CPU: "+pc.getCpu();
+
+               listaPCs.add(item);
+               return listaPCs;
+           }
         }
-        return null;
+        return listaPCs;
+    }
+    public static ArrayList<String> computadorasDescripcion(){
+        ArrayList<String> listaDescripcionesPC=new ArrayList<>();
+        String item = "";
+        for(Computadora pc: listaComputadoras){
+            item="Activo: "+ pc.getActivo()+"\n"+
+            "Marca: "+marcasComputadoras(pc.getMarca())+"\n"+
+            "Año: "+pc.getAño()+"\n"+
+            "CPU: "+pc.getCpu();
+
+            listaDescripcionesPC.add(item);
+        }
+        return listaDescripcionesPC;
     }
 }

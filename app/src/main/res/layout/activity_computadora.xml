@@ -18,11 +18,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            android:text="@string/textViewMonitor"
+            android:text="No hay computadoras ingresadas"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="aaa" />
+            tools:text="No hay computadoras ingresadas" />
 
         <ListView
             android:id="@+id/listView_computadoras"
@@ -44,6 +44,7 @@
 
             android:layout_marginBottom="24dp"
             android:clickable="true"
+            android:onClick="añadirComputadora"
             app:backgroundTint="#F1F1F1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

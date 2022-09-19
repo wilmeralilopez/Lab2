@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Computadora implements Serializable {
     public String activo;
-    public String marca;
+    public int marca;
     public String año;
     public String cpu;
 
@@ -16,11 +16,11 @@ public class Computadora implements Serializable {
         this.activo = activo;
     }
 
-    public String getMarca() {
+    public int getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
+    public void setMarca(int marca) {
         this.marca = marca;
     }
 

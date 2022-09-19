@@ -10,63 +10,60 @@
         android:id="@+id/textView_computadora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="52dp"
         android:text="Computadora"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_computadora_activo"
+        android:id="@+id/editText_computadora_activo_actualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="Activo"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_computadora" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editText_anio_computadora_actualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="@+id/editText_computadora_activo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText_computadora_activo"
-        app:layout_constraintTop_toBottomOf="@+id/editText_computadora_activo" />
-
-    <EditText
-        android:id="@+id/editText_anio_computadora"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Año"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_pc_actualizar"
+        app:layout_constraintStart_toStartOf="@+id/spinner_pc_actualizar"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_pc_actualizar" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/editTextCPU_pc_actualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="CPU"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editText_anio_computadora"
+        app:layout_constraintEnd_toEndOf="@+id/editText_anio_computadora_actualizar"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText_anio_computadora"
-        app:layout_constraintTop_toBottomOf="@+id/editText_anio_computadora" />
+        app:layout_constraintStart_toStartOf="@+id/editText_anio_computadora_actualizar"
+        app:layout_constraintTop_toBottomOf="@+id/editText_anio_computadora_actualizar" />
+
+    <Spinner
+        android:id="@+id/spinner_pc_actualizar"
+        android:layout_width="203dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="40dp"
+        android:entries="@array/listaMarcasPC"
+        app:layout_constraintEnd_toEndOf="@+id/editText_computadora_activo_actualizar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_computadora_activo_actualizar"
+        app:layout_constraintTop_toBottomOf="@+id/editText_computadora_activo_actualizar" />
 </android.support.constraint.ConstraintLayout>

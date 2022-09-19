@@ -3,5 +3,13 @@
     <string name="overflow_buscar">buscar</string>
     <string name="overflow_todo">todo</string>
     <string name="textViewMonitor">No entra al if</string>
+    <string-array name="listaMarcasPC">
+        <item>Dell</item>
+        <item>HP</item>
+        <item>Samsung</item>
+        <item>ACER</item>
+        <item>Otros</item>
+
+    </string-array>
 
 </resources>
