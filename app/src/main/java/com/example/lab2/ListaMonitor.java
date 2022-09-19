@@ -74,7 +74,7 @@ public class ListaMonitor extends AppCompatActivity implements Custom_dialog_mon
                 "d123A");
 
 
-        list_monitores_cache.add(monitor2);
+        list_monitores_cache.add(monitor3);
         try
         {
             //Bundle recibirdatos = getIntent().getExtras();
