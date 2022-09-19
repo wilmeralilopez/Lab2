@@ -14,8 +14,17 @@ public class ComputadorasLista {
         listaComputadoras.add(computadora);
 
     }
-    public void eliminarComputadora(Computadora computadora){
-        listaComputadoras.remove(computadora);
+
+    public static void editarComputadora(int position, Computadora computadora){
+        Computadora pc = ComputadorasLista.getListaComputadoras().get(position);
+        pc.setActivo(computadora.getActivo());
+        pc.setMarca(computadora.getMarca());
+        pc.setAño(computadora.getAño());
+        pc.setCpu(computadora.getCpu());
+    }
+
+    public static  void eliminarComputadora(int posicion){
+        listaComputadoras.remove(ComputadorasLista.getListaComputadoras().get(posicion));
     }
 
     private static String marcasComputadoras(int i){
