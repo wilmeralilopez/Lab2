@@ -33,13 +33,19 @@ public class ComputadoraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_computadora);
 
-        FloatingActionButton floatingActionButton = findViewById(R.id.fab_add_computadora);
-        floatingActionButton.setOnClickListener(view -> {
-            Intent intent =new Intent(this, CrearComputadoraActivity.class);
-            startActivity(intent);
+        FloatingActionButton fab= findViewById(R.id.fab_add_computadora);
+        Intent intent = new Intent(this, CrearComputadoraActivity.class);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent);
+
+            }
         });
 
-        if(ComputadorasLista.getListaComputadoras().size()>0){
+
+
+        if(!ComputadorasLista.getListaComputadoras().isEmpty()){
             TextView textView= findViewById(R.id.text_noHayPC);
             textView.setText("");
             textView.setTextSize(0);
@@ -62,6 +68,11 @@ public class ComputadoraActivity extends AppCompatActivity {
 
 
     }
+    public void irCrearComputadora(View view){
+        Intent intent = new Intent(ComputadoraActivity.this, CrearComputadoraActivity.class);
+        startActivityForResult(intent, 1);
+        startActivity(intent);
+    }
 
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -71,7 +82,6 @@ public class ComputadoraActivity extends AppCompatActivity {
     }
 
     public void btnMenuComputadoraAction(MenuItem menuItem) {
-        Log.d("msg", "clic texto");
 
 
         View view = findViewById(R.id.btn_menu_computadora);
