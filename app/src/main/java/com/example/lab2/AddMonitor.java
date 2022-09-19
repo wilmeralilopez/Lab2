@@ -31,11 +31,15 @@ public class AddMonitor extends AppCompatActivity {
         etPulgadas = findViewById(R.id.et_pulgadas);
         etAños = findViewById(R.id.et_año);
         etModelo = findViewById(R.id.et_modelo);
-        Bundle recibirdatos = getIntent().getExtras();
+        /*Bundle recibirdatos = getIntent().getExtras();
 
-        list_monitores_cache = (ArrayList<Monitor>) recibirdatos.getSerializable("lista");
+        list_monitores_cache = (ArrayList<Monitor>) recibirdatos.getSerializable("lista");*/
 
         //Log.d("dato recibido de lista ", String.valueOf(list_monitores_cache));
+
+        list_monitores_cache = (ArrayList<Monitor>) getIntent().getSerializableExtra("lista");
+
+
 
     }
 
@@ -66,10 +70,16 @@ public class AddMonitor extends AppCompatActivity {
 
 
             Intent intent = new Intent(this, ListaMonitor.class);
+
+
+
             startActivityForResult(intent, 1);
-            Bundle bundle3 = new Bundle();
-            bundle3.putSerializable("monitor1", monitor);
-            intent.putExtras(bundle3);
+            list_monitores_cache.add(monitor);
+
+            intent.putExtra("lista", list_monitores_cache);
+            //Bundle bundle3 = new Bundle();
+            //bundle3.putSerializable("monitor1", monitor);
+            //intent.putExtras(bundle3);
             startActivity(intent);
 
 
