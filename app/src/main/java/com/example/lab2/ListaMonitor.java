@@ -23,8 +23,7 @@ public class ListaMonitor extends AppCompatActivity implements Custom_dialog_mon
     private TextView  textViewMonitor;
     private ListView listaMonitor;
 
-    private final String[] Nombres = {"Monitor 1", "Monitor 2"};
-    private final String[] año = {"2021", "2022"};
+
 
     private final ArrayList<String> list_monitores = new ArrayList<>();
     private ArrayList<Monitor> list_monitores_cache = new ArrayList<>();
@@ -58,7 +57,24 @@ public class ListaMonitor extends AppCompatActivity implements Custom_dialog_mon
 
 
         list_monitores_cache.add(monitor2);
+        Monitor monitor3 = new Monitor("C042324",
+                "C012324",
+                "Del34",
+                "234\"",
+                "2024",
+                "d12334");
 
+
+        list_monitores_cache.add(monitor3);
+        Monitor monitor3 = new Monitor("CAA1234",
+                "CAA1523",
+                "Del33",
+                "2AA\"",
+                "202A",
+                "d123A");
+
+
+        list_monitores_cache.add(monitor2);
         try
         {
             //Bundle recibirdatos = getIntent().getExtras();
